@@ -1,0 +1,71 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".SignupActivity" >
+
+        <TextView
+            android:id="@+id/tvSignupHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="username" />
+
+        <EditText
+            android:id="@+id/etSignupUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionNext"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:text="password" />
+
+        <EditText
+            android:id="@+id/etSignupPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword|textNoSuggestions"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip"
+            android:text="confirm password" />
+
+        <EditText
+            android:id="@+id/etSignupPasswordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword|textNoSuggestions"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/bSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="create identity" />
+    </LinearLayout>
+
+</ScrollView>

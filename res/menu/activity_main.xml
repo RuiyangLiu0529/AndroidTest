@@ -1,0 +1,50 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item_overflow"
+        android:icon="@drawable/ic_menu_overflow"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="options">
+        <menu>
+            <item
+                android:id="@+id/menu_send_image_bar"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/select_image"/>
+            <item
+                android:id="@+id/menu_capture_image_bar"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/capture_image"/>
+            <item
+                android:id="@+id/menu_close_bar"
+                android:icon="@drawable/ic_menu_end_conversation"
+                android:title="@string/close_tab"/>
+            <item
+                android:id="@+id/menu_clear_messages"
+                android:icon="@drawable/ic_menu_delete"
+                android:title="delete all messages"/>
+            <item
+                android:id="@+id/menu_invite_external"
+                android:icon="@drawable/blue_heart"
+                android:title="share surespot"/>
+
+            <!-- I told you before kid, paywhatyoulike -->
+
+            <item
+                android:id="@+id/menu_pwyl"
+                android:icon="@drawable/heart"
+                android:title="pay what you like">
+                
+            </item>
+            <item
+                android:id="@+id/menu_logout_bar"
+                android:icon="@drawable/ic_lock_power_off"
+                android:title="@string/logout"/>
+            <item
+                android:id="@+id/menu_settings_bar"
+                android:icon="@drawable/ic_menu_preferences"
+                android:title="@string/settings"/>
+        </menu>
+    </item>
+
+</menu>

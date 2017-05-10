@@ -1,0 +1,108 @@
+<com.twofours.surespot.chat.MainActivityLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".ChatActivity" >
+
+    <com.viewpagerindicator.TitlePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/abs__background_holo_dark"
+        android:textColor="#7733b5e5"
+        android:textSize="20sp"
+        app:footerIndicatorStyle="none"
+        app:footerLineHeight="0dp"
+        app:footerPadding="8dp"
+        app:selectedBold="true"
+        app:selectedColor="@color/surespotBlue"
+        app:topPadding="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTexts"
+        android:layout_below="@+id/indicator" />
+
+    <ImageView
+        android:id="@+id/bEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fEmoji"
+        android:layout_alignBottom="@+id/editTexts"
+        android:layout_alignTop="@+id/editTexts"
+        android:layout_alignWithParentIfMissing="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/abs__list_selector_holo_light"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/editTexts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fEmoji"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toLeftOf="@+id/bSend"
+        android:layout_toRightOf="@+id/bEmoji" >
+
+        <EditText
+            android:id="@+id/etInvite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeActionLabel="invite"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:maxHeight="150sp"
+            android:minHeight="45sp"
+            android:singleLine="true" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeActionLabel="send"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxHeight="150sp"
+            android:maxLines="5"
+            android:minHeight="45sp"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:visibility="gone" >
+        </EditText>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bSend"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_above="@+id/fEmoji"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginBottom="-10sp"
+        android:layout_marginRight="-10sp"
+        android:background="@drawable/send_button"
+        android:text="@string/home"
+        android:textColor="@android:color/black" />
+
+    <GridView
+        android:id="@+id/fEmoji"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:columnWidth="40dp"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="auto_fit"
+        android:padding="10dp"
+        android:stretchMode="spacingWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="gone" >
+    </GridView>
+
+</com.twofours.surespot.chat.MainActivityLayout>
